@@ -9,21 +9,21 @@
         },
         {
             "id": 2,
-            "name": "Doodles",
+            "name": "Roodles",
             "breed": "Poodle",
             "customerId": 1,
             "locationId": 2
         },
         {
             "id": 3,
-            "name": "Doodles",
+            "name": "Snoodles",
             "breed": "Poodle",
             "customerId": 1,
             "locationId": 2
         },
         {
             "id": 4,
-            "name": "Doodles",
+            "name": "Croodles",
             "breed": "Poodle",
             "customerId": 1,
             "locationId": 2
