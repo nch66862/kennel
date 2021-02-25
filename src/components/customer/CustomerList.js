@@ -1,23 +1,23 @@
 import React, { useContext, useEffect } from "react"
-import { AnimalContext } from "./AnimalProvider"
-import { AnimalCard } from "./AnimalCard"
-import "./Animal.css"
+import { CustomerContext } from "./CustomerProvider"
+import { CustomerCard } from "./CustomerCard"
+import "./Customer.css"
 
-export const AnimalList = () => {
-    // This state changes when `getAnimals()` is invoked below
-    const { animals, getAnimals } = useContext(AnimalContext)
+export const CustomerList = () => {
+    // This state changes when `getCustomers()` is invoked below
+    const { customers, getCustomers } = useContext(CustomerContext)
 
     //useEffect - reach out to the world for something
     useEffect(() => {
-        getAnimals()
+        getCustomers()
     },[])
 
 
     return (
-        <div className="animals">
+        <div className="customers">
             {
-                animals.map(animal => {
-                    return <AnimalCard key={animal.id} animal={animal} />
+                customers.map(customer => {
+                    return <CustomerCard key={customer.id} customer={customer} />
                 })
             }
         </div>

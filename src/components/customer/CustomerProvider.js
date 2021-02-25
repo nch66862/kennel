@@ -1,40 +1,40 @@
 import React, { useState, createContext } from "react"
 
 // The context is imported and used by individual components that need data
-export const AnimalContext = createContext()
+export const CustomerContext = createContext()
 
 // This component establishes what data can be used.
-export const AnimalProvider = (props) => {
-    const [animals, setAnimals] = useState([])
+export const CustomerProvider = (props) => {
+    const [customers, setCustomers] = useState([])
 
-    const getAnimals = () => {
-        return fetch("http://localhost:8088/animals?_expand=location")
+    const getCustomers = () => {
+        return fetch("http://localhost:8088/customers")
             .then(res => res.json())
-            .then(setAnimals)
+            .then(setCustomers)
     }
 
-    const addAnimal = animalObj => {
-        return fetch("http://localhost:8088/animals", {
+    const addCustomer = customerObj => {
+        return fetch("http://localhost:8088/customers", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(animalObj)
+            body: JSON.stringify(customerObj)
         })
-            .then(getAnimals)
+            .then(getCustomers)
     }
 
     /*
         You return a context provider which has the
-        `animals` state, `getAnimals` function,
-        and the `addAnimal` function as keys. This
+        `customers` state, `getCustomers` function,
+        and the `addCustomer` function as keys. This
         allows any child elements to access them.
     */
     return (
-        <AnimalContext.Provider value={{
-            animals, getAnimals, addAnimal
+        <CustomerContext.Provider value={{
+            customers, getCustomers, addCustomer
         }}>
             {props.children}
-        </AnimalContext.Provider>
+        </CustomerContext.Provider>
     )
 }
