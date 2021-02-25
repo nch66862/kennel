@@ -1,6 +1,7 @@
 import React from "react"
 import "./Kennel.css"
 import { AnimalCard } from "./animal/AnimalCard"
+import { PropsAndState } from "./PropsAndState"
 
 export const Kennel = () => {
 const kennel = {
@@ -21,6 +22,7 @@ return (
         </address>
 
         <h2>Animals</h2>
+        <PropsAndState yourName={"Nicholas"} />
         <article className="animals">
             <AnimalCard />
             <AnimalCard />
