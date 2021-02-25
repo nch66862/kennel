@@ -9,23 +9,23 @@
         },
         {
             "id": 2,
-            "name": "Doodles",
+            "name": "Roodles",
             "breed": "Poodle",
-            "customerId": 1,
+            "customerId": 2,
             "locationId": 2
         },
         {
             "id": 3,
-            "name": "Doodles",
+            "name": "Snoodles",
             "breed": "Poodle",
-            "customerId": 1,
+            "customerId": 3,
             "locationId": 2
         },
         {
             "id": 4,
-            "name": "Doodles",
+            "name": "Croodles",
             "breed": "Poodle",
-            "customerId": 1,
+            "customerId": 4,
             "locationId": 2
         }
     ],
@@ -37,32 +37,44 @@
         },
         {
             "id": 2,
-            "name": "Hannah Hall",
+            "name": "Vannah Hall",
             "address": "7002 Chestnut Ct"
         },
         {
             "id": 3,
-            "name": "Hannah Hall",
+            "name": "Savannah Hall",
             "address": "7002 Chestnut Ct"
         },
         {
             "id": 4,
-            "name": "Hannah Hall",
+            "name": "Bohanna Hall",
             "address": "7002 Chestnut Ct"
         }
     ],
     "employees": [
         {
+            "id": 1,
             "name": "Nick",
-            "role": "Janitorial"
+            "role": "Janitorial",
+            "locationId": 1
         },
         {
-            "name": "Nick",
-            "role": "Janitorial"
+            "id": 2,
+            "name": "Sick",
+            "role": "Janitorial",
+            "locationId": 1
         },
         {
-            "name": "Nick",
-            "role": "Janitorial"
+            "id": 3,
+            "name": "Rick",
+            "role": "Janitorial",
+            "locationId": 2
+        },
+        {
+            "id": 4,
+            "name": "Mick",
+            "role": "Janitorial",
+            "locationId": 2
         }
     ],
     "locations": [

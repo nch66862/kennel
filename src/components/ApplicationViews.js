@@ -1,10 +1,14 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { Home } from "./Home"
-import { AnimalCard } from "./animal/AnimalCard"
-import { LocationCard } from "./location/LocationCard"
-import { CustomerCard } from "./customer/CustomerCard"
-import { EmployeeCard } from "./employee/EmployeeCard"
+import { AnimalList } from "./animal/AnimalList"
+import { AnimalProvider } from "./animal/AnimalProvider"
+import { CustomerProvider } from "./customer/CustomerProvider"
+import { CustomerList } from "./customer/CustomerList"
+import { EmployeeProvider } from "./employee/EmployeeProvider"
+import { EmployeeList } from "./employee/EmployeeList"
+import { LocationProvider } from "./location/LocationProvider"
+import { LocationList } from "./location/LocationList"
 
 export const ApplicationViews = () => {
     return (
@@ -15,18 +19,26 @@ export const ApplicationViews = () => {
             </Route>
 
             {/* Render the animal list when http://localhost:3000/animals */}
-            <Route path="/locations">
-                <LocationCard />
-            </Route>
-            <Route path="/animals">
-                <AnimalCard />
-            </Route>
-            <Route path="/customers">
-                <CustomerCard />
-            </Route>
-            <Route path="/employees">
-                <EmployeeCard />
-            </Route>
+            <LocationProvider>
+                <Route path="/locations">
+                    <LocationList />
+                </Route>
+            </LocationProvider>
+            <AnimalProvider>
+                <Route path="/animals">
+                    <AnimalList />
+                </Route>
+            </AnimalProvider>
+            <CustomerProvider>
+                <Route path="/customers">
+                    <CustomerList />
+                </Route>
+            </CustomerProvider>
+            <EmployeeProvider>
+                <Route path="/employees">
+                    <EmployeeList />
+                </Route>
+            </EmployeeProvider>
         </>
     )
 }
