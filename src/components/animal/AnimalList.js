@@ -10,7 +10,7 @@ export const AnimalList = () => {
     //useEffect - reach out to the world for something
     useEffect(() => {
         getAnimals()
-    })
+    },[])
 
 
     return (
