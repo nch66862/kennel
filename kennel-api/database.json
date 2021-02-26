@@ -82,6 +82,12 @@
       "name": "Mick",
       "role": "Janitorial",
       "locationId": 2
+    },
+    {
+      "name": "Christian Mann",
+      "role": "dog handler",
+      "locationId": 1,
+      "id": 5
     }
   ],
   "locations": [
