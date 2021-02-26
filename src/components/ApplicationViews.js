@@ -9,35 +9,54 @@ import { EmployeeProvider } from "./employee/EmployeeProvider"
 import { EmployeeList } from "./employee/EmployeeList"
 import { LocationProvider } from "./location/LocationProvider"
 import { LocationList } from "./location/LocationList"
+import { AnimalForm } from "./animal/AnimalForm"
+import { EmployeeForm } from "./employee/EmployeeForm"
+import { LocationForm } from "./location/LocationForm"
+import { CustomerForm } from "./customer/CustomerForm"
 
 export const ApplicationViews = () => {
     return (
         <>
-            {/* Render the location list when http://localhost:3000/ */}
             <Route exact path="/">
                 <Home />
             </Route>
-
-            {/* Render the animal list when http://localhost:3000/animals */}
             <LocationProvider>
-                <Route path="/locations">
+                <Route exact path="/locations">
                     <LocationList />
+                </Route>
+                <Route path="/locations/create">
+                    <LocationForm />
                 </Route>
             </LocationProvider>
             <AnimalProvider>
-                <Route path="/animals">
-                    <AnimalList />
-                </Route>
+                <LocationProvider>
+                    <CustomerProvider>
+                        <Route exact path="/animals">
+                            <AnimalList />
+                        </Route>
+                        <Route path="/animals/create">
+                            <AnimalForm />
+                        </Route>
+                    </CustomerProvider>
+                </LocationProvider>
             </AnimalProvider>
             <CustomerProvider>
-                <Route path="/customers">
+                <Route exact path="/customers">
                     <CustomerList />
+                </Route>
+                <Route path="/customers/create">
+                    <CustomerForm />
                 </Route>
             </CustomerProvider>
             <EmployeeProvider>
-                <Route path="/employees">
-                    <EmployeeList />
-                </Route>
+                <LocationProvider>
+                    <Route exact path="/employees">
+                        <EmployeeList />
+                    </Route>
+                    <Route path="/employees/create">
+                        <EmployeeForm />
+                    </Route>
+                </LocationProvider>
             </EmployeeProvider>
         </>
     )
