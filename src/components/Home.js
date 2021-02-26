@@ -15,13 +15,13 @@ export const Home = () => {
                 console.log(userId)
                 console.log(loggedInUser)
                 console.log(customers)
+                const newestUser = customers.find(customer => customer.id === userId)
                 if (userId) {
-                    const newestUser = customers.find(customer => customer.id === userId)
                     if (newestUser !== undefined){
                         setUser(newestUser)
                     }
                 }
-                console.log(loggedInUser)
+                console.log(newestUser)
             })
     }, [])
 
@@ -29,7 +29,7 @@ export const Home = () => {
         <>
             <h2>Nashville Kennels</h2>
             <small>Loving care when you're not there.</small>
-
+            
             <address>
                 <div>Visit Us at the Nashville North Location</div>
                 <div>500 Puppy Way</div>
