@@ -40,27 +40,32 @@
     {
       "id": 1,
       "name": "Hannah Hall",
-      "address": "7002 Chestnut Ct"
+      "email": "7002 Chestnut Ct"
     },
     {
       "id": 2,
       "name": "Vannah Hall",
-      "address": "7002 Chestnut Ct"
+      "email": "7002 Chestnut Ct"
     },
     {
       "id": 3,
       "name": "Savannah Hall",
-      "address": "7002 Chestnut Ct"
+      "email": "7002 Chestnut Ct"
     },
     {
       "id": 4,
       "name": "Bohanna Hall",
-      "address": "7002 Chestnut Ct"
+      "email": "7002 Chestnut Ct"
     },
     {
       "name": "Jeremy Jones",
-      "address": "3148 Lonestar St",
+      "email": "3148 Lonestar St",
       "id": 5
+    },
+    {
+      "email": "nickcarver@amail.com",
+      "name": "Nick Carver",
+      "id": 6
     }
   ],
   "employees": [

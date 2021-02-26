@@ -23,7 +23,6 @@ export const CustomerList = () => {
                     return <CustomerCard key={customer.id} customer={customer} />
                 })
             }
-            <button onClick={() => { history.push("/customers/create") }}>Register new Client</button>
         </div>
     )
 }
