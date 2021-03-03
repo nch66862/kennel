@@ -2,17 +2,17 @@
   "animals": [
     {
       "id": 1,
-      "name": "Doodles",
-      "breed": "Poodle",
-      "customerId": 1,
-      "locationId": 2
+      "name": "Fluffy",
+      "breed": "Egyptian Hairless",
+      "locationId": 1,
+      "customerId": 6
     },
     {
       "id": 2,
-      "name": "Roodles",
+      "name": "Roodles - Not a noodle",
       "breed": "Poodle",
-      "customerId": 2,
-      "locationId": 2
+      "locationId": 3,
+      "customerId": 5
     },
     {
       "id": 3,
