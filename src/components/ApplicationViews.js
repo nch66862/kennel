@@ -14,6 +14,7 @@ import { EmployeeForm } from "./employee/EmployeeForm"
 import { LocationForm } from "./location/LocationForm"
 import { AnimalDetail } from "./animal/AnimalDetail"
 import { EmployeeDetail } from "./employee/EmployeeDetail"
+import { LocationDetail } from "./location/LocationDetail"
 
 export const ApplicationViews = () => {
     return (
@@ -30,6 +31,9 @@ export const ApplicationViews = () => {
                 <Route path="/locations/create">
                     <LocationForm />
                 </Route>
+                <Route exact path="/location/detail/:locationId(\d+)">
+                    <LocationDetail />
+                </Route>
             </LocationProvider>
             <AnimalProvider>
                 <LocationProvider>
@@ -40,7 +44,7 @@ export const ApplicationViews = () => {
                         <Route path="/animals/create">
                             <AnimalForm />
                         </Route>
-                        <Route exact path="/animals/detail/:animalId(\d+)">
+                        <Route exact path="/animals/detail/:animalId(\d+)">{/* animalId specifies parameter. It is a new object with a key named animalId. If you add more /'s you can add more keys to your object. (\d+) means it is a number */}
                             <AnimalDetail />
                         </Route>
                     </CustomerProvider>

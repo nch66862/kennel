@@ -8,10 +8,9 @@ export const AnimalDetail = () => {
 
     const [animal, setAnimal] = useState({})
 
-    const { animalId } = useParams();
+    const { animalId } = useParams() //matches the parameter. The parameter is an object, hence the object destructuring to get the id only.
 
     useEffect(() => {
-        console.log("useEffect", animalId)
         getAnimalById(animalId)
             .then((response) => {
                 setAnimal(response)

@@ -11,7 +11,6 @@ export const EmployeeDetail = () => {
     const { employeeId } = useParams();
 
     useEffect(() => {
-        console.log("useEffect", employeeId)
         getEmployeeById(employeeId)
             .then((response) => {
                 setEmployee(response)
