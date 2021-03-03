@@ -47,6 +47,9 @@ export const ApplicationViews = () => {
                         <Route exact path="/animals/detail/:animalId(\d+)">{/* animalId specifies parameter. It is a new object with a key named animalId. If you add more /'s you can add more keys to your object. (\d+) means it is a number */}
                             <AnimalDetail />
                         </Route>
+                        <Route path="/animals/edit/:animalId(\d+)">
+                            <AnimalForm />
+                        </Route>
                     </CustomerProvider>
                 </LocationProvider>
             </AnimalProvider>
