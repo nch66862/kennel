@@ -68,6 +68,12 @@ export const AnimalForm = () => {
         }
     }
 
+    const handleCancel = (event) => {
+        event.preventDefault()
+        history.goBack()
+    }
+
+
     // Get customers and locations. If animalId is in the URL, getAnimalById
     useEffect(() => {
         getCustomers().then(getLocations).then(() => {
@@ -134,6 +140,7 @@ export const AnimalForm = () => {
                     handleSaveAnimal()
                 }}>
                 {animalId ? "Submit Edit" : "Save New Animal"}</button>
+            <button className="btn" onClick={handleCancel}>Cancel</button>
         </form>
     )
 }
