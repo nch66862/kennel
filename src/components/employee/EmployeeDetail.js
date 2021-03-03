@@ -1,29 +1,28 @@
 import React, { useContext, useEffect, useState } from "react"
-import { AnimalContext } from "./AnimalProvider"
-import "./Animal.css"
+import "./Employee.css"
 import { useParams } from "react-router-dom"
+import { EmployeeContext } from "./EmployeeProvider"
 
-export const AnimalDetail = () => {
-    const { getAnimalById } = useContext(AnimalContext)
+export const EmployeeDetail = () => {
+    const { getEmployeeById } = useContext(EmployeeContext)
 
-    const [animal, setAnimal] = useState({})
+    const [employee, setEmployee] = useState({})
 
-    const { animalId } = useParams();
+    const { employeeId } = useParams();
 
     useEffect(() => {
-        console.log("useEffect", animalId)
-        getAnimalById(animalId)
+        console.log("useEffect", employeeId)
+        getEmployeeById(employeeId)
             .then((response) => {
-                setAnimal(response)
+                setEmployee(response)
             })
     }, [])
 
     return (
-        <section className="animal">
-            <h3 className="animal__name">{animal.name}</h3>
-            <div className="animal__breed">{animal.breed}</div>
-            <div className="animal__location">Location: {animal.location?.name}</div>
-            <div className="animal__owner">Customer: {animal.customer?.name}</div>
+        <section className="employee">
+            <h3 className="employee__name">{employee.name}</h3>
+            <div className="employee__role">{employee.role}</div>
+            <div className="employee__location">Location: {employee.location?.name}</div>
         </section>
     )
 }
