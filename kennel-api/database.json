@@ -22,13 +22,6 @@
       "locationId": 2
     },
     {
-      "id": 4,
-      "name": "Croodles",
-      "breed": "Poodle",
-      "customerId": 4,
-      "locationId": 2
-    },
-    {
       "name": "Charlie",
       "breed": "Gentle Beast",
       "locationId": 1,
