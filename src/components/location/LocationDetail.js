@@ -32,7 +32,7 @@ export const LocationDetail = () => {
             <p className="location__employee">{commaListOfEmployees}</p>
             <h5 className="location__animals">Current Residents</h5>
             <ul>
-                {location.animals ? location.animals.map(animal => <li key={animal.id}>{animal.name}</li>): console.log("nothing here")}
+                {location.animals ? location.animals.map(animal => <li key={animal.id}>{animal.name}</li>): console.log("ignore this")}
             </ul>
         </section>
     )
