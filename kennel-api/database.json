@@ -27,6 +27,13 @@
       "locationId": 1,
       "customerId": 4,
       "id": 5
+    },
+    {
+      "name": "Dog",
+      "breed": "Not a Dog",
+      "locationId": 3,
+      "customerId": 6,
+      "id": 6
     }
   ],
   "customers": [
