@@ -5,7 +5,7 @@ export const CustomerContext = createContext()
 
 // This component establishes what data can be used.
 export const CustomerProvider = (props) => {
-    const [customers, setCustomers] = useState([{name: ""}])
+    const [customers, setCustomers] = useState([])
 
     const getCustomers = () => {
         return fetch("http://localhost:8088/customers")
