@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
 import "./Location.css"
-import { useParams } from "react-router-dom"
+import { useHistory, useParams } from "react-router-dom"
 import { LocationContext } from "./LocationProvider"
 
 export const LocationDetail = () => {
@@ -9,6 +9,7 @@ export const LocationDetail = () => {
     const [location, setLocation] = useState({})
 
     const { locationId } = useParams()
+    const history = useHistory()
 
     let commaListOfEmployees = ""
     if (location.employees) {
@@ -34,6 +35,7 @@ export const LocationDetail = () => {
             <ul>
                 {location.animals ? location.animals.map(animal => <li key={animal.id}>{animal.name}</li>): console.log("ignore this")}
             </ul>
+            <button onClick={() => {history.push(`/locations/edit/${location.id}`)}}>Edit</button>
         </section>
     )
 }

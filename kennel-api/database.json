@@ -2,17 +2,17 @@
   "animals": [
     {
       "id": 1,
-      "name": "Doodles",
-      "breed": "Poodle",
-      "customerId": 1,
-      "locationId": 2
+      "name": "Fluffy",
+      "breed": "Egyptian Hairless",
+      "locationId": 1,
+      "customerId": 6
     },
     {
       "id": 2,
-      "name": "Roodles",
+      "name": "Roodles - Not a noodle",
       "breed": "Poodle",
-      "customerId": 2,
-      "locationId": 2
+      "locationId": 3,
+      "customerId": 5
     },
     {
       "id": 3,
@@ -27,6 +27,27 @@
       "locationId": 1,
       "customerId": 4,
       "id": 5
+    },
+    {
+      "name": "Dog",
+      "breed": "Not a Dog",
+      "locationId": 3,
+      "customerId": 6,
+      "id": 6
+    },
+    {
+      "name": "animal 1",
+      "breed": "",
+      "locationId": 3,
+      "customerId": 6,
+      "id": 7
+    },
+    {
+      "name": "animal 2",
+      "breed": "",
+      "locationId": 3,
+      "customerId": 6,
+      "id": 8
     }
   ],
   "customers": [
@@ -64,9 +85,9 @@
   "employees": [
     {
       "id": 1,
-      "name": "Nick",
-      "role": "Janitorial",
-      "locationId": 1
+      "name": "Nick C",
+      "role": "Janitorial Senior Executive",
+      "locationId": 2
     },
     {
       "id": 2,
@@ -96,7 +117,7 @@
   "locations": [
     {
       "id": 1,
-      "name": "Nashville North",
+      "name": "Nashville Extra North Meh",
       "address": "8422 Johnson Pike"
     },
     {

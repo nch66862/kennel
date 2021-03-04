@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
 import "./Employee.css"
-import { useParams } from "react-router-dom"
+import { useHistory, useParams } from "react-router-dom"
 import { EmployeeContext } from "./EmployeeProvider"
 
 export const EmployeeDetail = () => {
@@ -8,7 +8,8 @@ export const EmployeeDetail = () => {
 
     const [employee, setEmployee] = useState({})
 
-    const { employeeId } = useParams();
+    const { employeeId } = useParams()
+    const history = useHistory()
 
     useEffect(() => {
         getEmployeeById(employeeId)
@@ -22,6 +23,7 @@ export const EmployeeDetail = () => {
             <h3 className="employee__name">{employee.name}</h3>
             <div className="employee__role">{employee.role}</div>
             <div className="employee__location">Location: {employee.location?.name}</div>
+            <button onClick={() => {history.push(`/employees/edit/${employee.id}`)}}>Edit</button>
         </section>
     )
 }

@@ -31,6 +31,9 @@ export const ApplicationViews = () => {
                 <Route path="/locations/create">
                     <LocationForm />
                 </Route>
+                <Route path="/locations/edit/:locationId(\d+)">
+                    <LocationForm />
+                </Route>
                 <Route exact path="/location/detail/:locationId(\d+)">
                     <LocationDetail />
                 </Route>
@@ -47,6 +50,9 @@ export const ApplicationViews = () => {
                         <Route exact path="/animals/detail/:animalId(\d+)">{/* animalId specifies parameter. It is a new object with a key named animalId. If you add more /'s you can add more keys to your object. (\d+) means it is a number */}
                             <AnimalDetail />
                         </Route>
+                        <Route path="/animals/edit/:animalId(\d+)">
+                            <AnimalForm />
+                        </Route>
                     </CustomerProvider>
                 </LocationProvider>
             </AnimalProvider>
@@ -61,6 +67,9 @@ export const ApplicationViews = () => {
                         <EmployeeList />
                     </Route>
                     <Route path="/employees/create">
+                        <EmployeeForm />
+                    </Route>
+                    <Route path="/employees/edit/:employeeId(\d+)">
                         <EmployeeForm />
                     </Route>
                     <Route exact path="/employee/detail/:employeeId(\d+)">
