@@ -32,8 +32,6 @@ export const EmployeeForm = () => {
     const handleClickSaveEmployee = (event) => {
         event.preventDefault()
 
-        const employeeId = employee.employeeId
-
         if (employeeId === 0) {
             window.alert("Please select a location")
         } else {
@@ -45,10 +43,11 @@ export const EmployeeForm = () => {
                     role: employee.role,
                     locationId: parseInt(employee.locationId),
                 })
-                    .then(() => history.push(`/employees/detail/${employee.id}`))
+                    .then(() => history.push(`/employee/detail/${employee.id}`))
+            } else {
+                addEmployee(employee)
+                    .then(() => history.push("/employees"))
             }
-            addEmployee(employee)
-                .then(() => history.push("/employees"))
         }
     }
 
