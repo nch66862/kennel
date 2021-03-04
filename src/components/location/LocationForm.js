@@ -4,7 +4,7 @@ import "./Location.css"
 import { useHistory, useParams } from 'react-router-dom';
 
 export const LocationForm = () => {
-    const { addLocation, getLocations, updateLocation, getLocationById } = useContext(LocationContext)
+    const { addLocation, updateLocation, getLocationById } = useContext(LocationContext)
 
     const [location, setLocation] = useState({
         name: "",
@@ -15,10 +15,6 @@ export const LocationForm = () => {
 
     const { locationId } = useParams();
     const history = useHistory();
-
-    useEffect(() => {
-        getLocations()
-    }, [])
 
     //Controlled component
     const handleControlledInputChange = (event) => {
