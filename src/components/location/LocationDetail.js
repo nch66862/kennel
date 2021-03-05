@@ -14,8 +14,8 @@ export const LocationDetail = () => {
     let commaListOfEmployees = ""
     if (location.employees) {
         commaListOfEmployees = location.employees.map(employee => {
-            return `${employee.name}, `
-        }).join("")
+            return employee.name
+        }).join(", ")
     }
 
     useEffect(() => {
@@ -30,7 +30,7 @@ export const LocationDetail = () => {
             <h3 className="location__name">{location.name}</h3>
             <div className="location__address">{location.address}</div>
             <h5 className="location__employees">Employees</h5>
-            <p className="location__employee">{commaListOfEmployees}</p>
+            <p className="location__employee">{commaListOfEmployees}.</p>
             <h5 className="location__animals">Current Residents</h5>
             <ul>
                 {location.animals ? location.animals.map(animal => <li key={animal.id}>{animal.name}</li>): console.log("ignore this")}

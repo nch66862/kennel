@@ -13,17 +13,18 @@ export const EmployeeList = () => {
     //useEffect - reach out to the world for something
     useEffect(() => {
         getEmployees()
-    },[])
+    }, [])
 
 
     return (
         <div className="employees">
+            <h3>Employees</h3>
             {
                 employees.map(employee => {
                     return <EmployeeCard key={employee.id} employee={employee} />
                 })
             }
-            <button onClick={() => {history.push("/employees/create")}}>Input New Hire</button>
+            <button onClick={() => { history.push("/employees/create") }}>Input New Hire</button>
         </div>
     )
 }
